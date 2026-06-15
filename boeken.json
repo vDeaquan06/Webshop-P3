@@ -1,0 +1,16 @@
+[
+  { "id": 1, "title": "Jujutsu Kaisen Volume 1", "price": 7.99 },
+  { "id": 2, "title": "Vinland Saga volume 3", "price": 19.99 },
+  { "id": 3, "title": "Vagabond volume 2", "price": 19.99 },
+  { "id": 4, "title": "The Amazing Spiderman Volume 1", "price": 6.99 },
+  { "id": 5, "title": "Black Panther: PANTHER'S QUEST", "price": 5.99 },
+  { "id": 6, "title": "Attack On Titan Volume 26", "price": 7.99 },
+  { "id": 7, "title": "Attack On Titan Volume 27", "price": 7.99 },
+  {
+    "id": 8,
+    "title": "JoJo's Bizarre Adventure: Steel Ball Run Volume 1",
+    "price": 19.99
+  },
+  { "id": 9, "title": "Absolute BatMan Volume 1", "price": 4.99 },
+  { "id": 10, "title": "Miles Morales: Spider-Man Volume 1", "price": 4.99 }
+]

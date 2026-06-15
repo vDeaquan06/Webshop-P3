@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Paneel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <img
+        src="img/logo.png"
+        alt="Comic Dealer Logo"
+        width="200"
+        class="logo"
+      />
+
+      <nav>
+        <a href="index.html">Homepagina</a>
+        <a href="cart.html">Winkelwagen<span class="aantal">0</span></a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+
+    <main>
+      <h1>Welkom Admin!</h1>
+
+      <div class="admin-section">
+        <h2>Producten</h2>
+
+        <h3>Nieuw Product Toevoegen</h3>
+        <input type="text" id="nieuwe-titel" placeholder="Product titel" />
+        <input
+          type="number"
+          id="nieuwe-prijs"
+          placeholder="Prijs"
+          step="0.01"
+        />
+        <button onclick="addProduct()">Product Toevoegen</button>
+
+        <h3>Alle Producten</h3>
+        <div id="admin-producten"></div>
+
+        <button onclick="resetProducts()" class="reset">Reset Producten</button>
+      </div>
+
+      <div class="admin-section">
+        <h2>Bestellingen</h2>
+        <div id="admin-bestellingen"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Comic Dealer, 2026 -</p>
+    </footer>
+
+    <script>
+      let wachtwoord = prompt("Admin wachtwoord:");
+      if (wachtwoord !== "admin") {
+        alert("Wachtwoord klopt niet");
+        window.location.href = "index.html";
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

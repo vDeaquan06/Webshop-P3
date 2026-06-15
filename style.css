@@ -1,0 +1,372 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(255, 107, 157, 0.2);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+#header {
+  background-color: rgb(245, 231, 241);
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 15px auto;
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+/*NOTE TO SELF: Niet vergeten kleuren te checken en te laten passen bij elkaar!*/
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.shoppen {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.slogan {
+  font-size: 18px;
+  color: #ff6b9d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6b9d;
+  transition: width 0.25s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ff6b9d;
+}
+
+.aantal {
+  background-color: #ff6b9d;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+h2 {
+  color: #ff6b9d;
+  border-bottom: 2px solid #ff6b9d;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+h3 {
+  color: #ff6b9d;
+  margin-top: 30px;
+}
+
+#boeken {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 23px;
+  margin-top: 20px;
+}
+
+.product {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.product-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.product-img:hover {
+  transform: scale(1.1);
+}
+
+.product h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reset {
+  margin-top: 20px;
+}
+
+.product .prijs {
+  font-size: 24px;
+  color: #ff6b9d;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product a {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.product a:hover {
+  color: #ff6b9d;
+}
+
+button {
+  background-color: #ff6b9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:hover {
+  background-color: #c42a53;
+}
+
+#wagen-items {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.wagen-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.wagen-item:hover {
+  background-color: #fdf5f8;
+}
+
+.total {
+  padding: 20px;
+  text-align: right;
+  font-size: 20px;
+  color: #ff6b9d;
+}
+
+.wagen-acties {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.admin-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.admin-item:hover {
+  background-color: #fdf5f8;
+}
+
+.admin-item button {
+  margin-left: 10px;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff6b9d;
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.15);
+}
+
+.contact-div,
+.over-ons-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffe6f0;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 3px solid #ff6b9d;
+}
+
+.product-detail {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-detail img {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.product-detail img:hover {
+  transform: scale(1.05);
+}
+
+.product-detail h1 {
+  color: #ff6b9d;
+}
+
+.product-detail .prijs {
+  font-size: 32px;
+  color: #ff6b9d;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.product-detail .Beschrijving {
+  line-height: 1.6;
+  color: #555;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #boeken {
+    grid-template-columns: 1fr;
+  }
+
+  .wagen-item,
+  .admin-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
